@@ -185,6 +185,7 @@ class Venusaur extends Pokemon {
         $this->addHistory([
             "type" => $type,
             "intensity" => $intensity,
+            "up" => $up,
             "level" => [0 => $this->getLevel(), 1 => $this->getLevel() + $intensity],
             "hp" => [0 => $this->getHp(), 1 => $hp],
             "duration" => $intensity * 20
@@ -192,14 +193,14 @@ class Venusaur extends Pokemon {
 
         $move = $this->getSpecialMove($this->getLevel() + $intensity);
         $this->setMove($move);
-        $getMove = count($move) > 0 ?"<br/>Mempelajari move baru: " . implode(", ", $move) : "";
+        $getMove = count($move) > 0 ?"<br/><br/>Mempelajari move baru: " . implode(", ", $move) : "";
 
         $this->setHp($hp);
         $this->addLevel($intensity);
 
         $this->saveData();
 
-        $str = "<p class='bg-zinc-200 px-5 py-4 rounded-lg mt-4 font-semibold   '>Training berhasil, pokemonmu naik level ke {$this->getLevel()}<br/>Hp bertambah menjadi {$hp}<br/>Stat {$type} bertambah menjadi {$up}{$getMove}</p>";
+        $str = "<p class='bg-zinc-200 px-5 py-4 rounded-lg mt-4 font-semibold'>Training berhasil, pokemonmu naik level ke {$this->getLevel()}<br/>Hp -> {$hp}<br/>Stat {$type} -> {$up}{$getMove}</p>";
         return $str;
     }
 

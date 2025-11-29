@@ -1,1 +1,1 @@
-{"pokemon":"Venusaur","level":1,"type":["grass","poison"],"stats":{"hp":300,"atk":152,"def":153,"speed":150},"ability":["Growl","Tackle"],"history":[{"type":"speed","intensity":1,"level":[0,1],"hp":[270,300],"duration":20}]}
+{"pokemon":"Venusaur","level":0,"type":["grass","poison"],"stats":{"hp":270,"atk":152,"def":153,"speed":148},"ability":[],"history":[]}

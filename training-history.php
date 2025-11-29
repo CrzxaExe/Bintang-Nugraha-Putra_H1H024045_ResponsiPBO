@@ -16,31 +16,52 @@ if(isset($_POST['reset'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style/output.css" >
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>History Training</title>
 </head>
 <body class="max-w-5xl w-full flex flex-col mx-auto overflow-x-hidden">
-    
+
+    <?php include "./src/views/header.html" ?>
+
     <main class="flex flex-col gap-3 pt-6">
         <div>
-            <h1 class="w-full text-5xl text-center">PokéCare</h1>
-
-            <h2 class="mt-4 text-xl w-full text-center">Menu</h2>
-            <div class="flex flex-row justify-center gap-5">
-                <a class="bg-lime-500 px-5 py-1.5 rounded-xl" href="/">Home</a>
-                <a class="bg-lime-500 px-5 py-1.5 rounded-xl" href="train.php">Training</a>
-            </div>
+            <h1 class="text-3xl font-bold"><i class="bx bx-paper"></i>History <?= $pk->getName() ?></h1>
         </div>
 
-        <hr/>
-
-        <div>
+        <div class="flex flex-col gap-4">
             <?php foreach($pk->getHistory() as $i => $h): ?>
-                <div class="bg-zinc-300 px-4 py-3">
-                    <h1 class="py-2"><?= $h['type'] ?></h1>
-                    <th class="py-2"><?= $h['intensity'] ?></th>
-                    <th class="py-2"><?= $h['level'][0] ?> -> <?= $h['level'][1] ?></th>
-                    <th class="py-2"><?= $h['hp'][0] ?> -> <?= $h['hp'][1] ?></th>
-                    <th class="py-2"><?= $h['duration'] ?> menit</th>
+                <div class="bg-zinc-200 px-4 py-3 rounded-xl">
+                    <h1 class="text-2xl font-bold rounded-lg block w-fit">Training <?= $h['type'] ?></h1>
+
+                    <div class="flex flex-row gap-2 mt-3 max-w-full">
+                        <div class="flex flex-col gap-2 bg-white px-2 w-50 justify-center items-center py-3 rounded-xl">
+                            <h5 class="text-sm text-zinc-600"><?= strtoupper($h['type'])  ?></h5>
+                            <span class=""><?= $h['up'] ?></span>
+                        </div>
+
+                        <div class="flex flex-col gap-2 bg-white px-2 w-40 justify-center items-center py-3 rounded-xl">
+                            <h5 class="text-sm text-zinc-600">Intensitas</h5>
+                            <span class=""><?= $h['intensity'] ?></span>
+                        </div>
+                        
+                        <div class="flex flex-col gap-2 bg-white px-2 w-40 justify-center items-center py-3 rounded-xl">
+                            <h5 class="text-sm text-zinc-600">Level</h5>
+                            <th class="text-3xl font-bold px-3 block"><?= $h['level'][0] ?> -> <?= $h['level'][1] ?></th>
+                        </div>
+
+                        <div class="flex flex-col gap-2 bg-white px-2 w-50 justify-center items-center py-3 rounded-xl">
+                            <h5 class="text-sm text-zinc-600">Health</h5>
+                            <th class="text-3xl font-bold px-3 block"><?= $h['hp'][0] ?> -> <?= $h['hp'][1] ?></th>
+                        </div>
+                        
+                        <div class="flex flex-col gap-2 bg-white px-2 w-60 justify-center items-center py-3 rounded-xl">
+                            <th class="text-3xl font-bold px-3 block">Durasi <?= $h['duration'] ?> Menit</th>
+                        </div>
+
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>

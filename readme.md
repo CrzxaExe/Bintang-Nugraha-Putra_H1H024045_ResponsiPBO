@@ -12,7 +12,7 @@ Shift Akhir : C
 Pertama-tama unduh repo ini dulu yaitu dengan ketik ini pada terminal:
 
 ```bash
-git clone
+git clone https://github.com/CrzxaExe/Bintang-Nugraha-Putra_H1H024045_ResponsiPBO.git
 ```
 
 Pindahkan folder tersebut ke dalam `www`(untuk laragon) atau `htdocs`(untuk xampp), open apache dan buka pada browser masing-masing, jika masih belum bisa kan ada youtube.
@@ -170,7 +170,7 @@ Merupakan kelas turunan dari pokemon yang berarti kelas ini akan memiliki semua 
 
 - Method training()
 
-> Pada kelas pokemon, method ini belum di implementasikan karena pokemon sendiri harus memiliki sebuah turunana(element/identtas) dulu agar dapat ditraining. Method ini akan menjalankan program untuk leveling dan menghasilkan string yang akan digunakan untuk feedback pada halaman train.
+> Pada kelas pokemon, method ini belum di implementasikan karena pokemon sendiri harus memiliki sebuah turunan(element/identitas) dulu agar dapat ditraining. Method ini akan menjalankan program untuk leveling dan menghasilkan string yang akan digunakan untuk feedback pada halaman train.
 
 - Method getSpecialMove()
 
@@ -178,6 +178,6 @@ Merupakan kelas turunan dari pokemon yang berarti kelas ini akan memiliki semua 
 
 ## Demo Singkat Aplikasi
 
-![]
+![demo](https://raw.githubusercontent.com/CrzxaExe/CrzxaExe/refs/heads/main/asset/PokeCare.gif)
 
 Segini ajah, gada bantuan AI sejadinya aja
