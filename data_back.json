@@ -1,0 +1,13 @@
+{
+  "pokemon": "Venusaur",
+  "level": 0,
+  "type": ["grass", "poison"],
+  "stats": {
+    "hp": 270,
+    "atk": 152,
+    "def": 153,
+    "speed": 148
+  },
+  "abilty": [],
+  "history": []
+}
